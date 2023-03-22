@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D9F199629C9EC7D00DBCC17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D9F199529C9EC7D00DBCC17 /* GoogleService-Info.plist */; };
+		4DC32F6F29C4BD170062A0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F6E29C4BD170062A0D9 /* AppDelegate.swift */; };
+		4DC32F7129C4BD170062A0D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F7029C4BD170062A0D9 /* SceneDelegate.swift */; };
+		4DC32F7329C4BD170062A0D9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F7229C4BD170062A0D9 /* WelcomeViewController.swift */; };
+		4DC32F7829C4BD1A0062A0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC32F7729C4BD1A0062A0D9 /* Assets.xcassets */; };
+		4DC32F7B29C4BD1A0062A0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC32F7929C4BD1A0062A0D9 /* LaunchScreen.storyboard */; };
+		4DC32F8529C4D0660062A0D9 /* CutomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F8429C4D0660062A0D9 /* CutomViews.swift */; };
+		4DC32F8729C4D5D70062A0D9 /* WelcomeUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F8629C4D5D70062A0D9 /* WelcomeUI.swift */; };
+		4DC32F9F29C6052D0062A0D9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F9E29C6052D0062A0D9 /* RegistrationViewController.swift */; };
+		4DC32FA129C605460062A0D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32FA029C605460062A0D9 /* LoginViewController.swift */; };
+		4DC32FA329C60ABD0062A0D9 /* LoginUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32FA229C60ABD0062A0D9 /* LoginUI.swift */; };
+		4DC32FA529C787A10062A0D9 /* RegistrationUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32FA429C787A10062A0D9 /* RegistrationUI.swift */; };
+		4DC32FA929C8B25B0062A0D9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32FA829C8B25B0062A0D9 /* ChatViewController.swift */; };
+		4DC32FAB29C8B27B0062A0D9 /* ChatUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32FAA29C8B27B0062A0D9 /* ChatUI.swift */; };
+		A98A89D759795658200A6025 /* Pods_SamuraiJC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECABB51E365245D45870FE29 /* Pods_SamuraiJC.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42B5E0B8FC5D4342DBB877AE /* Pods-SamuraiJC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamuraiJC.release.xcconfig"; path = "Target Support Files/Pods-SamuraiJC/Pods-SamuraiJC.release.xcconfig"; sourceTree = "<group>"; };
+		4D9F199529C9EC7D00DBCC17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DC32F6B29C4BD170062A0D9 /* SamuraiJC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamuraiJC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC32F6E29C4BD170062A0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4DC32F7029C4BD170062A0D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4DC32F7229C4BD170062A0D9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		4DC32F7729C4BD1A0062A0D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DC32F7A29C4BD1A0062A0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4DC32F7C29C4BD1A0062A0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DC32F8429C4D0660062A0D9 /* CutomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomViews.swift; sourceTree = "<group>"; };
+		4DC32F8629C4D5D70062A0D9 /* WelcomeUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUI.swift; sourceTree = "<group>"; };
+		4DC32F9E29C6052D0062A0D9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		4DC32FA029C605460062A0D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4DC32FA229C60ABD0062A0D9 /* LoginUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUI.swift; sourceTree = "<group>"; };
+		4DC32FA429C787A10062A0D9 /* RegistrationUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUI.swift; sourceTree = "<group>"; };
+		4DC32FA829C8B25B0062A0D9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		4DC32FAA29C8B27B0062A0D9 /* ChatUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUI.swift; sourceTree = "<group>"; };
+		7D7965B3FA5DA38C71215477 /* Pods-SamuraiJC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamuraiJC.debug.xcconfig"; path = "Target Support Files/Pods-SamuraiJC/Pods-SamuraiJC.debug.xcconfig"; sourceTree = "<group>"; };
+		ECABB51E365245D45870FE29 /* Pods_SamuraiJC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SamuraiJC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DC32F6829C4BD170062A0D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98A89D759795658200A6025 /* Pods_SamuraiJC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34BEAA3D62F6082B35F49ADA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D7965B3FA5DA38C71215477 /* Pods-SamuraiJC.debug.xcconfig */,
+				42B5E0B8FC5D4342DBB877AE /* Pods-SamuraiJC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4DC32F6229C4BD170062A0D9 = {
+			isa = PBXGroup;
+			children = (
+				4DC32F6D29C4BD170062A0D9 /* SamuraiJC */,
+				4DC32F6C29C4BD170062A0D9 /* Products */,
+				34BEAA3D62F6082B35F49ADA /* Pods */,
+				A16AD5045E18834985AC0729 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4DC32F6C29C4BD170062A0D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DC32F6B29C4BD170062A0D9 /* SamuraiJC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DC32F6D29C4BD170062A0D9 /* SamuraiJC */ = {
+			isa = PBXGroup;
+			children = (
+				4DC32F6E29C4BD170062A0D9 /* AppDelegate.swift */,
+				4DC32F7029C4BD170062A0D9 /* SceneDelegate.swift */,
+				4DC32F8229C4D0300062A0D9 /* View */,
+				4DC32F9D29C604EA0062A0D9 /* Controllers */,
+				4DC32F7729C4BD1A0062A0D9 /* Assets.xcassets */,
+				4DC32F7929C4BD1A0062A0D9 /* LaunchScreen.storyboard */,
+				4DC32F7C29C4BD1A0062A0D9 /* Info.plist */,
+				4D9F199529C9EC7D00DBCC17 /* GoogleService-Info.plist */,
+			);
+			path = SamuraiJC;
+			sourceTree = "<group>";
+		};
+		4DC32F8229C4D0300062A0D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4DC32F8429C4D0660062A0D9 /* CutomViews.swift */,
+				4DC32F8629C4D5D70062A0D9 /* WelcomeUI.swift */,
+				4DC32FA229C60ABD0062A0D9 /* LoginUI.swift */,
+				4DC32FA429C787A10062A0D9 /* RegistrationUI.swift */,
+				4DC32FAA29C8B27B0062A0D9 /* ChatUI.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4DC32F9D29C604EA0062A0D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DC32F7229C4BD170062A0D9 /* WelcomeViewController.swift */,
+				4DC32FA029C605460062A0D9 /* LoginViewController.swift */,
+				4DC32F9E29C6052D0062A0D9 /* RegistrationViewController.swift */,
+				4DC32FA829C8B25B0062A0D9 /* ChatViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A16AD5045E18834985AC0729 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECABB51E365245D45870FE29 /* Pods_SamuraiJC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DC32F6A29C4BD170062A0D9 /* SamuraiJC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DC32F7F29C4BD1A0062A0D9 /* Build configuration list for PBXNativeTarget "SamuraiJC" */;
+			buildPhases = (
+				6E10B7051088946B2C418534 /* [CP] Check Pods Manifest.lock */,
+				4DC32F6729C4BD170062A0D9 /* Sources */,
+				4DC32F6829C4BD170062A0D9 /* Frameworks */,
+				4DC32F6929C4BD170062A0D9 /* Resources */,
+				246DBEFEEB8F2168E05FF7A8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SamuraiJC;
+			productName = SamuraiJC;
+			productReference = 4DC32F6B29C4BD170062A0D9 /* SamuraiJC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DC32F6329C4BD170062A0D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					4DC32F6A29C4BD170062A0D9 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 4DC32F6629C4BD170062A0D9 /* Build configuration list for PBXProject "SamuraiJC" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DC32F6229C4BD170062A0D9;
+			productRefGroup = 4DC32F6C29C4BD170062A0D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DC32F6A29C4BD170062A0D9 /* SamuraiJC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DC32F6929C4BD170062A0D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC32F7B29C4BD1A0062A0D9 /* LaunchScreen.storyboard in Resources */,
+				4DC32F7829C4BD1A0062A0D9 /* Assets.xcassets in Resources */,
+				4D9F199629C9EC7D00DBCC17 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		246DBEFEEB8F2168E05FF7A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SamuraiJC/Pods-SamuraiJC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SamuraiJC/Pods-SamuraiJC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SamuraiJC/Pods-SamuraiJC-frameworks.sh\"\n";
+		};
+		6E10B7051088946B2C418534 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SamuraiJC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DC32F6729C4BD170062A0D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC32FAB29C8B27B0062A0D9 /* ChatUI.swift in Sources */,
+				4DC32FA129C605460062A0D9 /* LoginViewController.swift in Sources */,
+				4DC32F9F29C6052D0062A0D9 /* RegistrationViewController.swift in Sources */,
+				4DC32FA529C787A10062A0D9 /* RegistrationUI.swift in Sources */,
+				4DC32F8529C4D0660062A0D9 /* CutomViews.swift in Sources */,
+				4DC32F8729C4D5D70062A0D9 /* WelcomeUI.swift in Sources */,
+				4DC32F7329C4BD170062A0D9 /* WelcomeViewController.swift in Sources */,
+				4DC32F6F29C4BD170062A0D9 /* AppDelegate.swift in Sources */,
+				4DC32F7129C4BD170062A0D9 /* SceneDelegate.swift in Sources */,
+				4DC32FA929C8B25B0062A0D9 /* ChatViewController.swift in Sources */,
+				4DC32FA329C60ABD0062A0D9 /* LoginUI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4DC32F7929C4BD1A0062A0D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DC32F7A29C4BD1A0062A0D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DC32F7D29C4BD1A0062A0D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4DC32F7E29C4BD1A0062A0D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DC32F8029C4BD1A0062A0D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D7965B3FA5DA38C71215477 /* Pods-SamuraiJC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z9V4C4X7P6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SamuraiJC/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.jaxongorilla.SamuraiJC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4DC32F8129C4BD1A0062A0D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42B5E0B8FC5D4342DBB877AE /* Pods-SamuraiJC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z9V4C4X7P6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SamuraiJC/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.jaxongorilla.SamuraiJC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DC32F6629C4BD170062A0D9 /* Build configuration list for PBXProject "SamuraiJC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DC32F7D29C4BD1A0062A0D9 /* Debug */,
+				4DC32F7E29C4BD1A0062A0D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DC32F7F29C4BD1A0062A0D9 /* Build configuration list for PBXNativeTarget "SamuraiJC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DC32F8029C4BD1A0062A0D9 /* Debug */,
+				4DC32F8129C4BD1A0062A0D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DC32F6329C4BD170062A0D9 /* Project object */;
+}
