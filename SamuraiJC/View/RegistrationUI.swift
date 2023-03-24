@@ -18,7 +18,7 @@ class RegistrationUI: LoginUI {
     }()
     
     override func setUpViews() {
-        backgroundColor = UIColor(named: "RedSamurai")
+        backgroundColor = UIColor(named: K.Colors.redSamurai)
         
         addSubview(contentView)
         contentView.addSubview(stack)
@@ -27,8 +27,6 @@ class RegistrationUI: LoginUI {
         stack.addArrangedSubview(passwordTextField)
         stack.addArrangedSubview(registrationBtn)
         stack.addArrangedSubview(errorLabel)
-        
-        
         
         NSLayoutConstraint.activate([
             contentView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),

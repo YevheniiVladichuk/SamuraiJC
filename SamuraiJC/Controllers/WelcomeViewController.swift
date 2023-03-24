@@ -13,7 +13,6 @@ class WelcomeViewController: UIViewController {
     
     override func loadView() {
         view = welcomeUI
-        navigationItem.hidesBackButton = true
     }
     
     override func viewDidLoad() {
@@ -23,7 +22,6 @@ class WelcomeViewController: UIViewController {
         welcomeUI.registerBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
 
-    
     
     @objc func buttonTapped(_ sender: UIButton) {
         if sender == welcomeUI.loginBtn {

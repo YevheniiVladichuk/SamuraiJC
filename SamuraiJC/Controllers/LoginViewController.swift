@@ -23,13 +23,8 @@ class LoginViewController: UIViewController {
         let navController = self.navigationController
         let navBar = navController!.navigationBar
         
-        loginUI.configNavBar(navController: navController, navBar: navBar, navItem: navigationItem, target: self, action: #selector(goBack), title: "Логін", backTitle: "Назад")
+        loginUI.configNavBar(navBar: navBar, navItem: navigationItem, target: self, action: #selector(goBack), mainTitle: "Логін", backTitle: "Назад")
         loginUI.loginBtn.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
     }
     
     @objc func goBack() {
@@ -37,17 +32,20 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginTapped(_ sender: UIButton) {
-        if let email = loginUI.emailTextField.text, let password = loginUI.passwordTextField.text {
-            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                if let error = error {
-                    self.loginUI.errorLabel.alpha = 1
-                    self.loginUI.errorLabel.text = error.localizedDescription
-                }else {
+//        if let email = loginUI.emailTextField.text, let password = loginUI.passwordTextField.text {
+//
+//            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+//                if let error = error {
+//                    print(error.localizedDescription)
+//                    self.loginUI.errorLabel.alpha = 1
+//                    self.loginUI.errorLabel.text = "Щось не так :(\nПеревірте введені дані !"
+//
+//                }else {
                     let chatVC = ChatViewController()
                     self.navigationController?.modalPresentationStyle = .fullScreen
                     self.navigationController?.pushViewController(chatVC, animated: true)
-                }
-            }
-        }
+//                }
+//            }
+//        }
     }
 }

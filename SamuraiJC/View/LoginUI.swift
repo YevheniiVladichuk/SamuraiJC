@@ -8,12 +8,13 @@
 import Foundation
 import UIKit
 
+
 class LoginUI: WelcomeUI {
     
     let contentView: UIView = {
         let contentView = UIView()
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.backgroundColor = UIColor(named: "Background")
+        contentView.backgroundColor = UIColor(named: K.Colors.background)
         return contentView
     }()
     
@@ -42,7 +43,7 @@ class LoginUI: WelcomeUI {
     
     override func setUpViews() {
         
-        backgroundColor = UIColor(named: "RedSamurai")
+        backgroundColor = UIColor(named: K.Colors.redSamurai)
         
         addSubview(contentView)
         contentView.addSubview(stack)
@@ -65,9 +66,9 @@ class LoginUI: WelcomeUI {
         ])
     }
     
-    func configNavBar(navController: UINavigationController?, navBar: UINavigationBar, navItem: UINavigationItem, target: Any?, action: Selector, title: String, backTitle: String) {
-        navBar.customizeFont()
-        navItem.title = title
+    func configNavBar(navBar: UINavigationBar, navItem: UINavigationItem, target: Any?, action: Selector, mainTitle: String, backTitle: String) {
+        navBar.customizeTitle()
+        navItem.title = mainTitle
         navItem.leftBarButtonItem = UIBarButtonItem(title: backTitle, style: .plain, target: target, action: action)
         navItem.leftBarButtonItem?.tintColor = .white
     }

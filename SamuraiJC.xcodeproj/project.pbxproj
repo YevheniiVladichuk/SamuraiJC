@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D596B5429CC9C7C00481FAB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D596B5329CC9C7C00481FAB /* Message.swift */; };
 		4D9F199629C9EC7D00DBCC17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D9F199529C9EC7D00DBCC17 /* GoogleService-Info.plist */; };
 		4DC32F6F29C4BD170062A0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F6E29C4BD170062A0D9 /* AppDelegate.swift */; };
 		4DC32F7129C4BD170062A0D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F7029C4BD170062A0D9 /* SceneDelegate.swift */; };
 		4DC32F7329C4BD170062A0D9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F7229C4BD170062A0D9 /* WelcomeViewController.swift */; };
 		4DC32F7829C4BD1A0062A0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC32F7729C4BD1A0062A0D9 /* Assets.xcassets */; };
 		4DC32F7B29C4BD1A0062A0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC32F7929C4BD1A0062A0D9 /* LaunchScreen.storyboard */; };
-		4DC32F8529C4D0660062A0D9 /* CutomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F8429C4D0660062A0D9 /* CutomViews.swift */; };
+		4DC32F8529C4D0660062A0D9 /* Helpers&Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F8429C4D0660062A0D9 /* Helpers&Extensions.swift */; };
 		4DC32F8729C4D5D70062A0D9 /* WelcomeUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F8629C4D5D70062A0D9 /* WelcomeUI.swift */; };
 		4DC32F9F29C6052D0062A0D9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32F9E29C6052D0062A0D9 /* RegistrationViewController.swift */; };
 		4DC32FA129C605460062A0D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC32FA029C605460062A0D9 /* LoginViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		42B5E0B8FC5D4342DBB877AE /* Pods-SamuraiJC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SamuraiJC.release.xcconfig"; path = "Target Support Files/Pods-SamuraiJC/Pods-SamuraiJC.release.xcconfig"; sourceTree = "<group>"; };
+		4D596B5329CC9C7C00481FAB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		4D9F199529C9EC7D00DBCC17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DC32F6B29C4BD170062A0D9 /* SamuraiJC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamuraiJC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC32F6E29C4BD170062A0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +36,7 @@
 		4DC32F7729C4BD1A0062A0D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DC32F7A29C4BD1A0062A0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DC32F7C29C4BD1A0062A0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DC32F8429C4D0660062A0D9 /* CutomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomViews.swift; sourceTree = "<group>"; };
+		4DC32F8429C4D0660062A0D9 /* Helpers&Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helpers&Extensions.swift"; sourceTree = "<group>"; };
 		4DC32F8629C4D5D70062A0D9 /* WelcomeUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUI.swift; sourceTree = "<group>"; };
 		4DC32F9E29C6052D0062A0D9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		4DC32FA029C605460062A0D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4D596B5229CC9C6000481FAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D596B5329CC9C7C00481FAB /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4DC32F6229C4BD170062A0D9 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,8 @@
 			children = (
 				4DC32F6E29C4BD170062A0D9 /* AppDelegate.swift */,
 				4DC32F7029C4BD170062A0D9 /* SceneDelegate.swift */,
+				4DC32F8429C4D0660062A0D9 /* Helpers&Extensions.swift */,
+				4D596B5229CC9C6000481FAB /* Model */,
 				4DC32F8229C4D0300062A0D9 /* View */,
 				4DC32F9D29C604EA0062A0D9 /* Controllers */,
 				4DC32F7729C4BD1A0062A0D9 /* Assets.xcassets */,
@@ -103,7 +115,6 @@
 		4DC32F8229C4D0300062A0D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4DC32F8429C4D0660062A0D9 /* CutomViews.swift */,
 				4DC32F8629C4D5D70062A0D9 /* WelcomeUI.swift */,
 				4DC32FA229C60ABD0062A0D9 /* LoginUI.swift */,
 				4DC32FA429C787A10062A0D9 /* RegistrationUI.swift */,
@@ -250,11 +261,12 @@
 				4DC32FA129C605460062A0D9 /* LoginViewController.swift in Sources */,
 				4DC32F9F29C6052D0062A0D9 /* RegistrationViewController.swift in Sources */,
 				4DC32FA529C787A10062A0D9 /* RegistrationUI.swift in Sources */,
-				4DC32F8529C4D0660062A0D9 /* CutomViews.swift in Sources */,
+				4DC32F8529C4D0660062A0D9 /* Helpers&Extensions.swift in Sources */,
 				4DC32F8729C4D5D70062A0D9 /* WelcomeUI.swift in Sources */,
 				4DC32F7329C4BD170062A0D9 /* WelcomeViewController.swift in Sources */,
 				4DC32F6F29C4BD170062A0D9 /* AppDelegate.swift in Sources */,
 				4DC32F7129C4BD170062A0D9 /* SceneDelegate.swift in Sources */,
+				4D596B5429CC9C7C00481FAB /* Message.swift in Sources */,
 				4DC32FA929C8B25B0062A0D9 /* ChatViewController.swift in Sources */,
 				4DC32FA329C60ABD0062A0D9 /* LoginUI.swift in Sources */,
 			);

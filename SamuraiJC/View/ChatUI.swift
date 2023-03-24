@@ -8,20 +8,104 @@
 import Foundation
 import UIKit
 
-class ChatUI: RegistrationUI {
+class ChatUI: UIView {
     
-    override func setUpViews() {
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints = false
+        table.backgroundColor = UIColor(named: K.Colors.background)
+        table.register(MessageCell.self, forCellReuseIdentifier: MessageCell.id)
+        return table
+    }()
+    
+    let bottomView: UIView = {
+        let bottomView = UIView()
+        bottomView.translatesAutoresizingMaskIntoConstraints = false
+        bottomView.backgroundColor = UIColor(named: K.Colors.redSamurai)
+        return bottomView
+    }()
+    
+    let messageField: UITextField = {
+        let field = UITextField()
+        field.translatesAutoresizingMaskIntoConstraints = false
+        field.layer.cornerRadius = 10
+        field.font = field.font?.withSize(17)
+        field.backgroundColor = UIColor(named: K.Colors.chatField)
+        field.textAlignment = .left
+        field.leftView = UIView(frame:  CGRect(x: 0, y: 0, width: 20, height: 0))
+        field.leftViewMode = .always
+        field.textColor = UIColor(named: K.Colors.textColor)
+        field.tintColor = UIColor(named: K.Colors.textColor)
+        return field
+    }()
+    
+    let sendButton: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: 25, weight: .light, scale: .small)
+        let image = UIImage(systemName: "paperplane.fill", withConfiguration: symbolConfiguration)
+        btn.setImage(image, for: .normal)
+        btn.tintColor = UIColor(named: K.Colors.chatField)
+        return btn
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUpViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setUpViews()
+    }
+    
+    
+    func setUpViews() {
         
-        backgroundColor = UIColor(named: "RedSamurai")
-        addSubview(contentView)
+        backgroundColor = UIColor(named: K.Colors.redSamurai)
         
-        NSLayoutConstraint.activate([
-            contentView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            contentView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            contentView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+        addSubview(bottomView)
+        addSubview(tableView)
+        bottomView.addSubview(messageField)
+        bottomView.addSubview(sendButton)
 
+        NSLayoutConstraint.activate([
+            
+            bottomView.heightAnchor.constraint(equalToConstant: 50),
+            bottomView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            bottomView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            bottomView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            
+            sendButton.heightAnchor.constraint(equalToConstant: 40),
+            sendButton.widthAnchor.constraint(equalToConstant: 40),
+            sendButton.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -20),
+            sendButton.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 10),
+            
+            messageField.heightAnchor.constraint(equalToConstant: 40),
+            messageField.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 10),
+            messageField.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 25),
+            messageField.trailingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: -15),
+            
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomView.topAnchor),
+            tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            
         ])
         
     }
+    
+    func configChatNavBar(navBar: UINavigationBar, navItem: UINavigationItem, target: Any?, rightButtonAction: Selector) {
+        navBar.customizeTitle()
+        navBar.backgroundColor = UIColor(named: K.Colors.redSamurai)
+        navItem.hidesBackButton = true
+        let rightButton = UIBarButtonItem(title: "Вихід", style: .plain, target: target, action: rightButtonAction)
+        navItem.rightBarButtonItem = rightButton
+    }
+    
 }
+
+
+//нужно сделать что бы bottom view поднималось вместе с клавиатурой
+//что бы uitextfield увеличивался в зависимоти от текста
+

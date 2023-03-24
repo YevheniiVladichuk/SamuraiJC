@@ -59,7 +59,7 @@ class WelcomeUI: UIView {
     
     func setUpViews() {
         
-        backgroundColor = UIColor(named: "Background")
+        backgroundColor = UIColor(named: K.Colors.background)
         
         addSubview(stack)
         stack.addArrangedSubview(logo)
@@ -76,7 +76,6 @@ class WelcomeUI: UIView {
             
             mottoLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
-        
         
         var count = 0
         let motto = "Сильні духом, непереможні в бою !"

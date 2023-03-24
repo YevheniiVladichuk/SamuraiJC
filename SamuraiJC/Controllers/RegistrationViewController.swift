@@ -24,15 +24,11 @@ class RegistrationViewController: UIViewController {
         let navController = self.navigationController
         let navBar = navController!.navigationBar
                 
-        registrationUI.configNavBar(navController: navController, navBar: navBar, navItem: navigationItem, target: self, action: #selector(goBack), title: "Реєстрація", backTitle: "Назад")
+        registrationUI.configNavBar(navBar: navBar, navItem: navigationItem, target: self, action: #selector(goBack), mainTitle: "Реєстрація", backTitle: "Назад")
         
         registrationUI.registrationBtn.addTarget(self, action: #selector(registrationButtonTapped), for: .touchUpInside)
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
+
     
     @objc func goBack() {
         self.navigationController?.popViewController(animated: true)
