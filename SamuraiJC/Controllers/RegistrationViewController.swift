@@ -31,7 +31,8 @@ class RegistrationViewController: UIViewController {
 
     
     @objc func goBack() {
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.popViewController(animated: true)
     }
     
     @objc func registrationButtonTapped(_ sender: UIButton) {

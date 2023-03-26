@@ -9,12 +9,14 @@ import Foundation
 import UIKit
 
 class ChatUI: UIView {
-    
+
     let tableView: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         table.backgroundColor = UIColor(named: K.Colors.background)
         table.register(MessageCell.self, forCellReuseIdentifier: MessageCell.id)
+        table.separatorStyle = .none
+        table.keyboardDismissMode = .onDrag
         return table
     }()
     
@@ -68,11 +70,14 @@ class ChatUI: UIView {
         addSubview(tableView)
         bottomView.addSubview(messageField)
         bottomView.addSubview(sendButton)
-
+        
+        
         NSLayoutConstraint.activate([
             
+            keyboardLayoutGuide.topAnchor.constraint(
+                equalToSystemSpacingBelow: bottomView.bottomAnchor, multiplier: 1.0),
+            
             bottomView.heightAnchor.constraint(equalToConstant: 50),
-            bottomView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             bottomView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             bottomView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             
@@ -90,14 +95,11 @@ class ChatUI: UIView {
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomView.topAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            
         ])
-        
     }
     
     func configChatNavBar(navBar: UINavigationBar, navItem: UINavigationItem, target: Any?, rightButtonAction: Selector) {
         navBar.customizeTitle()
-        navBar.backgroundColor = UIColor(named: K.Colors.redSamurai)
         navItem.hidesBackButton = true
         let rightButton = UIBarButtonItem(title: "Вихід", style: .plain, target: target, action: rightButtonAction)
         navItem.rightBarButtonItem = rightButton
@@ -105,7 +107,4 @@ class ChatUI: UIView {
     
 }
 
-
-//нужно сделать что бы bottom view поднималось вместе с клавиатурой
-//что бы uitextfield увеличивался в зависимоти от текста
 

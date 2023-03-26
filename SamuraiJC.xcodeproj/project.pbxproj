@@ -160,6 +160,8 @@
 			dependencies = (
 			);
 			name = SamuraiJC;
+			packageProductDependencies = (
+			);
 			productName = SamuraiJC;
 			productReference = 4DC32F6B29C4BD170062A0D9 /* SamuraiJC.app */;
 			productType = "com.apple.product-type.application";
@@ -188,6 +190,8 @@
 				Base,
 			);
 			mainGroup = 4DC32F6229C4BD170062A0D9;
+			packageReferences = (
+			);
 			productRefGroup = 4DC32F6C29C4BD170062A0D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

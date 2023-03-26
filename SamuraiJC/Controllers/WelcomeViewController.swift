@@ -17,7 +17,6 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         welcomeUI.loginBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         welcomeUI.registerBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
@@ -27,11 +26,12 @@ class WelcomeViewController: UIViewController {
         if sender == welcomeUI.loginBtn {
             
             let loginVC = LoginViewController()
+            navigationController?.isNavigationBarHidden = false
             navigationController?.modalPresentationStyle = .fullScreen
             navigationController?.pushViewController(loginVC, animated: true)
         }else {
-            
             let registrationVC = RegistrationViewController()
+            navigationController?.isNavigationBarHidden = false
             navigationController?.modalPresentationStyle = .fullScreen
             navigationController?.pushViewController(registrationVC, animated: true)
         }

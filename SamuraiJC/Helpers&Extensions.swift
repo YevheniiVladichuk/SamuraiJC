@@ -15,6 +15,16 @@ struct K {
         static let background = "Background"
         static let textColor = "TextColor"
         static let chatField = "ChatField"
+        static let myMessage = "MyMessageBackground"
+        static let someOne = "SomeOneElseMessage"
+    }
+    
+    struct FStore {
+        static let collectionName = "messages"
+        static let senderField = "sender"
+        static let bodyField = "body"
+        static let dateField = "date"
+        
     }
     
 }
@@ -36,14 +46,23 @@ class MessageCell: UITableViewCell {
     let view: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(named: K.Colors.chatField)
+        view.backgroundColor = UIColor(named: K.Colors.myMessage)
+        view.layer.cornerRadius = 20
         return view
     }()
     
     let message: UILabel = {
         let message = UILabel()
         message.translatesAutoresizingMaskIntoConstraints = false
+        message.numberOfLines = 0
         return message
+    }()
+    
+    let leftImage: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "YouAvatar")
+        return image
     }()
     
     let rightImage: UIImageView = {
@@ -65,6 +84,7 @@ class MessageCell: UITableViewCell {
         configProperties()
     }
     
+    
     func configProperties() {
         self.selectionStyle = .none
     }
@@ -74,6 +94,7 @@ class MessageCell: UITableViewCell {
         backgroundColor = UIColor(named: K.Colors.background)
         
         self.contentView.addSubview(hStack)
+        hStack.addArrangedSubview(leftImage)
         hStack.addArrangedSubview(view)
         view.addSubview(message)
         hStack.addArrangedSubview(rightImage)
@@ -86,15 +107,18 @@ class MessageCell: UITableViewCell {
             hStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             hStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             
-            view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            view.heightAnchor.constraint(equalTo: hStack.heightAnchor),
             
             message.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
-            message.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            message.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             message.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
-            message.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            message.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             
             rightImage.heightAnchor.constraint(equalToConstant: 40),
-            rightImage.widthAnchor.constraint(equalToConstant: 40)
+            rightImage.widthAnchor.constraint(equalToConstant: 40),
+            
+            leftImage.widthAnchor.constraint(equalToConstant: 40),
+            leftImage.widthAnchor.constraint(equalToConstant: 40),
         ])
     }
 }
