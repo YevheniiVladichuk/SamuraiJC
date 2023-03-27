@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// MARK: - Constants
 struct K {
     
     struct Colors {
@@ -24,14 +25,12 @@ struct K {
         static let senderField = "sender"
         static let bodyField = "body"
         static let dateField = "date"
-        
     }
-    
 }
-
+// MARK: - Custom UITableViewCell
 class MessageCell: UITableViewCell {
     
-    static let id = "MessageCell"
+   static var id = "MessageCell"
     
     let hStack: UIStackView = {
         let stack = UIStackView()
@@ -43,62 +42,75 @@ class MessageCell: UITableViewCell {
         return stack
     }()
     
-    let view: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(named: K.Colors.myMessage)
-        view.layer.cornerRadius = 20
-        return view
+    let messageBackground: UIView = {
+        let messageBackground = UIView()
+        messageBackground.translatesAutoresizingMaskIntoConstraints = false
+        messageBackground.backgroundColor = UIColor(named: K.Colors.myMessage)
+        messageBackground.layer.cornerRadius = 14
+        return messageBackground
     }()
     
-    let message: UILabel = {
-        let message = UILabel()
-        message.translatesAutoresizingMaskIntoConstraints = false
-        message.numberOfLines = 0
-        return message
+    let messageText: UILabel = {
+        let messageText = UILabel()
+        messageText.translatesAutoresizingMaskIntoConstraints = false
+        messageText.numberOfLines = 0
+        return messageText
     }()
     
-    let leftImage: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "YouAvatar")
-        return image
-    }()
-    
-    let rightImage: UIImageView = {
+    let rightAvatar: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "MeAvatar")
         return image
     }()
     
+    let leftAvatar: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "YouAvatar")
+        return image
+    }()
+    
+    let leftSpacerView: UIView = {
+        let spacerView = UIView()
+        spacerView.backgroundColor = .blue
+        return spacerView
+    }()
+    
+    let rightrigSpacerView: UIView = {
+        let spacerView = UIView()
+        spacerView.backgroundColor = .yellow
+        return spacerView
+    }()
+    
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setUpView()
+        setUpViews()
         configProperties()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setUpView()
+        setUpViews()
         configProperties()
     }
-    
     
     func configProperties() {
         self.selectionStyle = .none
     }
     
-    func setUpView() {
+    func setUpViews() {
         
-        backgroundColor = UIColor(named: K.Colors.background)
+        backgroundColor = .clear
         
         self.contentView.addSubview(hStack)
-        hStack.addArrangedSubview(leftImage)
-        hStack.addArrangedSubview(view)
-        view.addSubview(message)
-        hStack.addArrangedSubview(rightImage)
-        
+        hStack.addArrangedSubview(leftAvatar)
+        hStack.addArrangedSubview(leftSpacerView)
+        hStack.addArrangedSubview(messageBackground)
+        messageBackground.addSubview(messageText)
+        hStack.addArrangedSubview(rightrigSpacerView)
+        hStack.addArrangedSubview(rightAvatar)
         
         NSLayoutConstraint.activate([
             
@@ -107,22 +119,23 @@ class MessageCell: UITableViewCell {
             hStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             hStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             
-            view.heightAnchor.constraint(equalTo: hStack.heightAnchor),
+            messageBackground.heightAnchor.constraint(equalTo: hStack.heightAnchor),
+                        
+            messageText.topAnchor.constraint(equalTo: messageBackground.topAnchor, constant: 10),
+            messageText.leadingAnchor.constraint(equalTo: messageBackground.leadingAnchor, constant: 7),
+            messageText.bottomAnchor.constraint(equalTo: messageBackground.bottomAnchor, constant: -10),
+            messageText.trailingAnchor.constraint(equalTo: messageBackground.trailingAnchor, constant: -7),
             
-            message.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
-            message.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
-            message.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
-            message.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            leftAvatar.heightAnchor.constraint(equalToConstant: 40),
+            leftAvatar.widthAnchor.constraint(equalToConstant: 40),
             
-            rightImage.heightAnchor.constraint(equalToConstant: 40),
-            rightImage.widthAnchor.constraint(equalToConstant: 40),
-            
-            leftImage.widthAnchor.constraint(equalToConstant: 40),
-            leftImage.widthAnchor.constraint(equalToConstant: 40),
+            rightAvatar.heightAnchor.constraint(equalToConstant: 40),
+            rightAvatar.widthAnchor.constraint(equalToConstant: 40)
         ])
     }
 }
 
+// MARK: - Custom Buttons
 class CustomButton: UIButton {
     
     override init(frame: CGRect) {
@@ -154,6 +167,7 @@ class RedButton: CustomButton {
     }
 }
 
+// MARK: - Custom TextField
 class CustomUITextField: UITextField {
     
     override init(frame: CGRect) {
@@ -182,7 +196,6 @@ class CustomUITextField: UITextField {
 }
 
 // MARK: - Extensions
-
 extension UINavigationBar {
     func customizeTitle() {
         self.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "AmericanTypewriter-SemiBold", size: 24)!,

@@ -34,7 +34,7 @@ class ChatUI: UIView {
         field.font = field.font?.withSize(17)
         field.backgroundColor = UIColor(named: K.Colors.chatField)
         field.textAlignment = .left
-        field.leftView = UIView(frame:  CGRect(x: 0, y: 0, width: 20, height: 0))
+        field.leftView = UIView(frame:  CGRect(x: 0, y: 0, width: 10, height: 0))
         field.leftViewMode = .always
         field.textColor = UIColor(named: K.Colors.textColor)
         field.tintColor = UIColor(named: K.Colors.textColor)
@@ -51,6 +51,12 @@ class ChatUI: UIView {
         return btn
     }()
     
+    let swipeDown: UISwipeGestureRecognizer = {
+        let swipeDown = UISwipeGestureRecognizer()
+        swipeDown.direction = .down
+        return swipeDown
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpViews()
@@ -61,11 +67,11 @@ class ChatUI: UIView {
         setUpViews()
     }
     
-    
     func setUpViews() {
         
         backgroundColor = UIColor(named: K.Colors.redSamurai)
         
+        addGestureRecognizer(swipeDown)
         addSubview(bottomView)
         addSubview(tableView)
         bottomView.addSubview(messageField)
@@ -95,6 +101,7 @@ class ChatUI: UIView {
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomView.topAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            
         ])
     }
     
@@ -104,7 +111,7 @@ class ChatUI: UIView {
         let rightButton = UIBarButtonItem(title: "Вихід", style: .plain, target: target, action: rightButtonAction)
         navItem.rightBarButtonItem = rightButton
     }
-    
+
 }
 
 

@@ -31,12 +31,10 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginTapped(_ sender: UIButton) {
-        let e = "1@2.com"
-        let p = "123456"
-        
-//        if let email = loginUI.emailTextField.text, let password = loginUI.passwordTextField.text {
+  
+        if let email = loginUI.emailTextField.text, let password = loginUI.passwordTextField.text {
 
-            Auth.auth().signIn(withEmail: e, password: p) { authResult, error in
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let error = error {
                     print(error.localizedDescription)
                     self.loginUI.errorLabel.alpha = 1
@@ -46,7 +44,7 @@ class LoginViewController: UIViewController {
                     self.navigationController?.modalPresentationStyle = .fullScreen
                     self.navigationController?.pushViewController(chatVC, animated: true)
                 }
-//            }
+            }
         }
     }
 }
